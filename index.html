@@ -1,0 +1,85 @@
+<!--
+BY CARLOS VARGAS 
+
+Learning JavaScript
+Using phind.com and chatGPT to build the structure
+Tweaking and learning through failure
+
+2023-05-23
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Carlos' Exam Timer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- stlying etc -->
+  <audio id="notifMain" src="/notifMain.mp3" playsinline></audio>
+  <audio id="notifQues" src="/notifQues.mp3" playsinline></audio>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/90827d6b09.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <header>
+    <h1>Carlos' Exam Timer</h1>
+  </header>
+
+  <div class="description">
+    <p>I built this website to help me optimize my time allocation for each question in exams.</p>
+  </div>
+
+  <div class="centered-container">
+    <input type="number" id="timeLimit" placeholder="Total exam time in minutes">
+    <input type="number" id="numQuestions" placeholder="Number of questions">
+    <button onclick="updateTimer()">Start Exam</button>
+
+    <div class="output-section" id="ui-location">
+      <!--  <div class="inner-outputs" id="question-block">
+        <h2 id="currentQuestion">Question #</h2>
+        <p id="questTime">&nbsp</p>
+      </div>
+      <div class="inner-outputs" id="total-time">
+        <h2>Total</h2>
+        <p id="timer">&nbsp</p>
+      </div> // this what will be placed here when the script runs -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-banner">
+      <a href="mailto:carlosfvargas526@gmail.com" class="social-link" target="_blank"><i>follow me on email</i></a>
+      <a href="https://twitter.com/carlos0fv" class="social-link" target="_blank"><i>message me on twitter </i><i
+          class="fa fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+
+<!-- only for when the exam timer finishes -->
+<div id="end-message-template" style="display: none;">
+  <div id="end-message">
+    <h2>Congrats!</h2>
+    <p>Hope you actually studied</p>
+    <i class="fa-solid fa-face-smile-wink"></i>
+  </div>
+</div>
+
+<!-- for replacing the ui -->
+<div id="ui-template" style="display: none;">
+  <div class="inner-outputs" id="question-block">
+    <h2 id="currentQuestion">Question #</h2>
+    <p id="questTime">&nbsp</p>
+  </div>
+  <div class="inner-outputs" id="total-time">
+    <h2>Total</h2>
+    <p id="timer">&nbsp</p>
+  </div>
+</div>
+
+</html>

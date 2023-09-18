@@ -1,0 +1,214 @@
+:root {
+  --background: #011F26;
+  --header: #2C524B;
+  --button: #40AD99;
+  --highlights: #DADADA;
+  --highlights2: #8FBDB4;
+
+  --pastel-green: #A7C957;
+  --light-gray: #EBEBEB;
+  --light-gray-2: #AEB5B2;
+  --dark-gray: #6D7D76;
+  --light-blue: #4DA8DA;
+  --maroon: #752E36;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-width: 700px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--light-gray-2);
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+
+  color: var(--highlights);
+  background-color: inherit;
+  border: 0.08rem solid var(--dark-gray);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: var(--light-gray);
+}
+
+button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px 0px;
+  background-color: var(--highlights2);
+  color: var(--background);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: var(--light-blue);
+}
+
+
+.output-section {
+  margin: 10px 0px 40px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  justify-content: center;
+}
+
+.inner-outputs {
+  padding: 15px;
+  width: 110px;
+}
+
+.output-section #question-block {
+  background-color: var(--highlights);
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.output-section #total-time {
+  background-color: var(--highlights2);
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#end-message,
+#end-message h2,
+#end-message p {
+  text-align: center;
+  color: var(--light-gray);
+}
+
+#end-message h2 {
+  font-size: 28px;
+}
+
+header {
+  text-align: center;
+  background-color: var(--header);
+  font-size: 14px;
+  color: var(--light-gray);
+  padding: 7px;
+  max-height: 70px;
+}
+
+.centered-container p,
+h2 {
+  text-align: center;
+  font-size: 21px;
+  color: var(--background);
+}
+
+/* bottom of page */
+footer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+}
+
+.social-banner {
+  margin-top: auto; /* sets the social links to the bottom of the page */
+}
+
+.social-link,
+.fa-twitter {
+  color: var(--dark-gray);
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.social-link {
+  margin: 0 20px;
+
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+
+/*=================================
+Media queries for responsive design
+===================================*/
+@media (max-width: 767px) {
+
+  body,
+  html {
+    max-width: 100vw;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .output-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+    margin-bottom: 4px;
+  }
+
+  .inner-outputs {
+    padding: 15px;
+    margin: auto;
+    min-width: 80px;
+  }
+
+  .description {
+    font-size: 16px;
+    width: 300px;
+    max-width: 1200px;
+  }
+}
