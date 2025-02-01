@@ -4,4 +4,4 @@ I built this website in a night to help me optimize my time allocation for each 
 Check out the Vercel-hosted website here: 
 https://exam-timer-sandy.vercel.app/
 
-<img width="1512" alt="Screenshot 2025-01-26 at 6 00 03 PM" src="https://github.com/user-attachments/assets/2eac0792-be1a-4f52-bb26-1152b6c42c5c" />
+![Screenshot 2025-02-01 at 2 28 56 PM](https://github.com/user-attachments/assets/d67d8cff-7d16-4b04-8134-70cac62650f7)
