@@ -16,7 +16,7 @@ function startTimer(timeLimit) {
     const minutes = Math.floor(currentTime / 60);
     const seconds = Math.floor(currentTime % 60);
 
-    self.postMessage({ // send values back to script.js
+    self.postMessage({ // send values back to index.js
       exam: 'update',
       remMinExam: minutes,
       remSecExam: seconds
@@ -45,7 +45,7 @@ function startQuestionsTimer(timeLimit, numQuestions) {
     const minutes = Math.floor(currentTime / 60);
     const seconds = Math.floor(currentTime % 60);
 
-    self.postMessage({ // send values back to script.js
+    self.postMessage({ // send values back to index.js
       ques: 'update',
       remMinQues: minutes,
       remSecQues: seconds,
@@ -70,7 +70,7 @@ function startQuestionsTimer(timeLimit, numQuestions) {
 // START TO IT ALL
 ====================*/
 // Listen for messages from the main thread
-self.onmessage = function(event) {
+self.onmessage = function (event) {
   if (event.data.exam === 'start') {
     clearInterval(countdown);
     startTimer(event.data.timeLimit);
